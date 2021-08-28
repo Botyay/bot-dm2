@@ -33,7 +33,9 @@ const {
 	pubgid,
 	mlid,
 	ffid,
-	ffvilog
+	ffvilog,
+        dana,
+        ovo
 } = require('./lib/text')
 const { color, getBuffer, convertMp3 } = require('./lib/func')
 moment.tz.setDefault('Asia/Jakarta').locale('id');
