@@ -29,7 +29,11 @@ const {
 	info,
 	ownerm,
 	ingfo,
-	mess
+	mess,
+	pubgid,
+	mlid,
+	ffid,
+	ffvilog
 } = require('./lib/text')
 const { color, getBuffer, convertMp3 } = require('./lib/func')
 moment.tz.setDefault('Asia/Jakarta').locale('id');
@@ -116,16 +120,88 @@ module.exports = handle = (client, Client) => {
                   "sections": sec}}, {}) 
             client.relayWAMessage(po, {waitForAck: true})	
         }) 
-        Client.cmd.on('listmenu', async(data) => {
+        Client.cmd.on('payment', async(data) => {
+             sec = []
+          sec.push({
+            "rows": [
+              {
+                "title": "GOPAY",
+                "description": "", 
+                "rowId": `${data.prefix}listmenu`
+              }, 
+              {
+                "title": "OVO", 
+                "description": "", 
+                "rowId": `${data.prefix}gmenu`
+              }, 
+              {
+                "title": "DANA", 
+                "description": "", 
+                "rowId": `${data.prefix}dwmenu`
+              }
+              ]
+              })
+          	let po = client.prepareMessageFromContent(data.from, {
+				  "listMessage":{
+                  "title": `MENU ABY BOT`,
+                  "description": `PAYMENT nya kak *${data.pushname}*`,
+                  "buttonText": "MENU!",
+                  "listType": "SINGLE_SELECT",
+                  "sections": sec}}, {}) 
+            client.relayWAMessage(po, {waitForAck: true})	
+        })
+        Client.cmd.on('listdm', async(data) => {
+             sec = []
+          sec.push({
+            "rows": [
+              {
+                "title": "Free Fire ID",
+                "description": "Top Up Dengan Id Server", 
+                "rowId": `${data.prefix}ffid`
+              }, 
+              {
+                "title": "Free Fire Vilog", 
+                "description": "Top Up Dengan Login", 
+                "rowId": `${data.prefix}ffvilog`
+              }, 
+              {
+                "title": "Mobile legends Bang Bang", 
+                "description": "Top Up Dengan Id Server", 
+                "rowId": `${data.prefix}mlid`
+              }, 
+              {
+                "title": "Pubg Mobile ID", 
+                "description": "Top Up Dengan Id Server", 
+                "rowId": `${data.prefix}pubgid`
+              }
+              ]
+              })
+          	let po = client.prepareMessageFromContent(data.from, {
+				  "listMessage":{
+                  "title": `List Aby Bot`,
+                  "description": `List Menu nya kak *${data.pushname}*`,
+                  "buttonText": "MENU!",
+                  "listType": "SINGLE_SELECT",
+                  "sections": sec}}, {}) 
+            client.relayWAMessage(po, {waitForAck: true})	
+        }) 
+        Client.cmd.on('ffid', async(data) => {
                    try {
-                    data.reply(listmenu(data.prefix)) 
+                    data.reply(ffid(data.prefix)) 
                    } catch(e) {
                      data.reply('' + e) 
                    }
          })
-         Client.cmd.on('gmenu', async(data) => {
+        Client.cmd.on('mlid', async(data) => {
                    try {
-                    data.reply(gmenu(data.prefix)) 
+                    data.reply(mlid(data.prefix)) 
+                   } catch(e) {
+                     data.reply('' + e) 
+                   }
+         })
+         Client.cmd.on('pubgid', async(data) => {
+                   try {
+                    data.reply(pubgid(data.prefix)) 
                    } catch(e) {
                      data.reply('' + e) 
                    }
@@ -677,6 +753,7 @@ module.exports = handle = (client, Client) => {
             client.relayWAMessage(po, {waitForAck: true})
 			}
         })
+        
 		Client.cmd.on('antilink', (data) => {
             if(!data.isGroup) return data.reply(mess.admin)
             if(!data.isAdmin) return data.reply(mess.admin)
@@ -982,7 +1059,7 @@ module.exports = handle = (client, Client) => {
                 case 'list':
  	                 const mediaMsg = await client.prepareMessageMedia(await getBuffer(configs.imgUrl), 'imageMessage')
                      const buttonMessage = {
-                           contentText: `Hai kak *${data.pushname},* saya adalah Cyz Botz yang siap membantu kakak dalam membuat sticker dan lainnya`,
+                           contentText: `Hai kak *${data.pushname},* saya adalah Aby Botz yang siap membantu kakak dalam membuat Pesanan`,
                            footerText: `Cyz Botz`,
                                 "contextInfo": {
 									  mentionedJid: [configs.ownerList[0]],
@@ -992,23 +1069,23 @@ module.exports = handle = (client, Client) => {
                                      },
                                      buttons: [
                                      {
-                                       buttonId: `${data.prefix}listmsg`,
+                                       buttonId: `${data.prefix}listdm`,
                                        buttonText: {
-                                          displayText: "MENU"
+                                          displayText: "LIST DM"
                                         },
                                          "type": "RESPONSE"
                                      },
                                      {
-                                       buttonId: `${data.prefix}owner`,
+                                       buttonId: `${data.prefix}payment`,
                                        buttonText: {
-                                          displayText: "OWNER"
+                                          displayText: "PAYMENT"
                                         },
                                          "type": "RESPONSE"
                                      },
                                      {
                                        buttonId: `${data.prefix}infobot`,
                                        buttonText: {
-                                          displayText: "INFO"
+                                          displayText: "SYARAT & KETENTUAN"
                                         },
                                          "type": "RESPONSE"
                                      },
