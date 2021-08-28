@@ -446,7 +446,7 @@ module.exports = handle = (client, Client) => {
          })
          Client.cmd.on('gopay', async (data) => {
             if(isLimit(data.sender)) return data.reply(mess.limit)
-            res = 'https://f.top4top.io/p_2066dty3y0.jpg'
+            res = 'https://i.ibb.co/k4fGn5y/IMG-20210828-WA0228.jpg'
             Client.sendFileFromUrl(data.from, res, 'p.jpg', ``, data.message)
         })
         Client.cmd.on('limit', async (data) => {
