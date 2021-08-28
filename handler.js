@@ -127,17 +127,17 @@ module.exports = handle = (client, Client) => {
               {
                 "title": "GOPAY",
                 "description": "", 
-                "rowId": `${data.prefix}listmenu`
+                "rowId": `${data.prefix}gopay`
               }, 
               {
                 "title": "OVO", 
                 "description": "", 
-                "rowId": `${data.prefix}gmenu`
+                "rowId": `${data.prefix}ovo`
               }, 
               {
                 "title": "DANA", 
                 "description": "", 
-                "rowId": `${data.prefix}dwmenu`
+                "rowId": `${data.prefix}dana`
               }
               ]
               })
