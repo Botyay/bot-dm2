@@ -14,7 +14,7 @@
  
 </div>
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/dvnz99/wabot/)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Mrbug45/aby-bot/)
 
 [![Run on Repl.it](https://repl.it/badge/github/justpiple/whatsapp-bot)](https://repl.it/github/justpiple/whatsapp-bot)
 
