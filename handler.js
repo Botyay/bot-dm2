@@ -35,7 +35,10 @@ const {
 	ffid,
 	ffvilog,
         dana,
-        ovo
+        ovo,
+        pulsa,
+        vipul,
+        gopay
 } = require('./lib/text')
 const { color, getBuffer, convertMp3 } = require('./lib/func')
 moment.tz.setDefault('Asia/Jakarta').locale('id');
@@ -128,24 +131,29 @@ module.exports = handle = (client, Client) => {
             "rows": [
               {
                 "title": "GOPAY",
-                "description": "", 
+                "description": " QRIS GOPAY ", 
                 "rowId": `${data.prefix}gopay`
               }, 
               {
                 "title": "OVO", 
-                "description": "", 
+                "description": " NOMOR OVO", 
                 "rowId": `${data.prefix}ovo`
               }, 
               {
                 "title": "DANA", 
-                "description": "", 
+                "description": " NOMOR DANA ", 
                 "rowId": `${data.prefix}dana`
+              },
+              {
+                "title": "PULSA", 
+                "description": " NOMOR TELKOMSEL", 
+                "rowId": `${data.prefix}pulsa`
               }
               ]
               })
           	let po = client.prepareMessageFromContent(data.from, {
 				  "listMessage":{
-                  "title": `MENU ABY BOT`,
+                  "title": `MENU CYZ BOT`,
                   "description": `PAYMENT nya kak *${data.pushname}*`,
                   "buttonText": "MENU!",
                   "listType": "SINGLE_SELECT",
@@ -165,23 +173,18 @@ module.exports = handle = (client, Client) => {
                 "title": "Free Fire Vilog", 
                 "description": "Top Up Dengan Login", 
                 "rowId": `${data.prefix}ffvilog`
-              }, 
+              },
               {
-                "title": "Mobile legends Bang Bang", 
-                "description": "Top Up Dengan Id Server", 
-                "rowId": `${data.prefix}mlid`
-              }, 
-              {
-                "title": "Pubg Mobile ID", 
-                "description": "Top Up Dengan Id Server", 
-                "rowId": `${data.prefix}pubgid`
+                "title": "Free Fire Vipul", 
+                "description": "Top Up Dengan Pulsa", 
+                "rowId": `${data.prefix}ffvipul`
               }
               ]
               })
           	let po = client.prepareMessageFromContent(data.from, {
 				  "listMessage":{
-                  "title": `List Aby Bot`,
-                  "description": `List Menu nya kak *${data.pushname}*`,
+                  "title": `List Cyz Botz`,
+                  "description": `List Diamond nya kak *${data.pushname}*`,
                   "buttonText": "MENU!",
                   "listType": "SINGLE_SELECT",
                   "sections": sec}}, {}) 
@@ -281,6 +284,13 @@ module.exports = handle = (client, Client) => {
          Client.cmd.on('info', async(data) => {
                    try {
                     data.reply(info(data.prefix)) 
+                   } catch(e) {
+                     data.reply('' + e) 
+                   }
+         })
+         Client.cmd.on('ffvipul', async(data) => {
+                   try {
+                    data.reply(vipul(data.prefix)) 
                    } catch(e) {
                      data.reply('' + e) 
                    }
@@ -446,11 +456,25 @@ module.exports = handle = (client, Client) => {
                      data.reply('' + e) 
                    }
          })
-         Client.cmd.on('gopay', async (data) => {
+         Client.cmd.on('pulsa', async(data) => {
+                   try {
+                    data.reply(pulsa(data.prefix)) 
+                   } catch(e) {
+                     data.reply('' + e) 
+                   }
+         })
+         Client.cmd.on('qr_all', async (data) => {
             if(isLimit(data.sender)) return data.reply(mess.limit)
-            res = 'https://i.ibb.co/k4fGn5y/IMG-20210828-WA0228.jpg'
+            res = 'https://i.ibb.co/wRSW9tS/IMG-20210829-WA0070.jpg'
             Client.sendFileFromUrl(data.from, res, 'p.jpg', ``, data.message)
         })
+        Client.cmd.on('gopay', async(data) => {
+                   try {
+                    data.reply(gopay(data.prefix)) 
+                   } catch(e) {
+                     data.reply('' + e) 
+                   }
+         })
         Client.cmd.on('limit', async (data) => {
             const dataUser = JSON.parse(fs.readFileSync('./lib/json/dataUser.json'))
             if(dataUser[data.sender].premium) return data.reply(`Hai @${data.sender.split('@')[0]} 👋🏻\nAnda adalah user premium yang memiliki akses tanpa batas limit!`)
