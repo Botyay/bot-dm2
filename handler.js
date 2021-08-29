@@ -196,7 +196,7 @@ module.exports = handle = (client, Client) => {
          })
          Client.cmd.on('ffvilog', async(data) => {
                    try {
-                    data.reply(ffid(data.prefix)) 
+                    data.reply(ffvilog(data.prefix)) 
                    } catch(e) {
                      data.reply('' + e) 
                    }
