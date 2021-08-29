@@ -148,6 +148,11 @@ module.exports = handle = (client, Client) => {
                 "title": "PULSA", 
                 "description": " NOMOR TELKOMSEL", 
                 "rowId": `${data.prefix}pulsa`
+              },
+{
+                "title": "QRISS ALL", 
+                "description": " ALL PAYMENT", 
+                "rowId": `${data.prefix}qr_all`
               }
               ]
               })
