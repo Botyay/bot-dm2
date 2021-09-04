@@ -14,15 +14,15 @@
  
 </div>
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Mrbug45/aby-bot/)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/CyzChan/bot-dm2/)
 
-[![Run on Repl.it](https://repl.it/badge/github/justpiple/whatsapp-bot)](https://repl.it/github/justpiple/whatsapp-bot)
+[![Run on Repl.it](https://repl.it/badge/github/justpiple/whatsapp-bot)](https://repl.it/github/CyzChan/bot-dm2/)
 
 
 ### Install ⬇️
 
 ```bash
-> git clone https://github.com/hariyadin404/botwea
+> git clone https://github.com/CyzChan/bot-dm2
 > cd wabot
 > npm i
 ```
@@ -48,12 +48,12 @@ after start it you need to scan the qr
 #### Session name and options is optional
 ### Contact me
 
-- [TELEGRAM](https://t.me/justpiple)
-- [WHATSAPP](http://wa.me/62813309603730)
+- [TELEGRAM](https://t.me/cyz_chan)
+- [WHATSAPP](http://wa.me/6285329981485)
 - [GROUP CHAT WHATSAPP](https://chat.whatsapp.com/CipnbWvrTDo2l4mSYt4o8a)
 
 
 ## 🙏 Special Thanks to
 * <a href="https://github.com/adiwajshing/Baileys"><img alt="GitHub" src="https://img.shields.io/badge/@adiwajshing/Baileys%20-%23121011.svg?style=flat-square&logo=npm&color=white"/></a>
-* [Justpiple](https://github.com/justpiple/whatsapp-bot)
-* [Akmal Ganz](https://github.com/justpiple/whatsapp-bot)
+* [CyaChan](https://github.com/Cyzchan/whatsapp-bot)
+* [JustPilple](https://github.com/justpiple/whatsapp-bot)
