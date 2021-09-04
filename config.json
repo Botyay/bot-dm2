@@ -4,14 +4,14 @@
 	"zeksKey": "ZeksApin",
 	"autoRead": false,
 	"maxLimit": 30,
-	"ownerList": ["6282279601471@s.whatsapp.net"], 
+	"ownerList": ["6282190819939@s.whatsapp.net"], 
 	"apiUrl": "https://api.zeks.me",
         "apiLol": "https://api.lolhuman.xyz",
         "imgUrl": "https://i.ibb.co/8j4ypGk/IMG-20210829-WA0144.jpg",
-	"botname": "AbyBot", 
+	"botname": "HaikalBot", 
 	"xkey": "your_key96b0fd663b4c7de98c72efba", 
         "eztykey": "eztyb",
         "lolkey": "96b0fd663b4c7de98c72efba",
 	"pack": "KotzGanz",
-	"author": "6285329981485"
+	"author": "6282190819939"
 }
