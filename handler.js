@@ -1116,8 +1116,8 @@ module.exports = handle = (client, Client) => {
                 case 'list':
  	                 const mediaMsg = await client.prepareMessageMedia(await getBuffer(configs.imgUrl), 'imageMessage')
                      const buttonMessage = {
-                           contentText: `Hai kak *${data.pushname},* saya adalah Aby Botz yang siap membantu kakak dalam membuat Pesanan`,
-                           footerText: `Cyz Botz`,
+                           contentText: `Hai kak *${data.pushname},* saya adalah Haikal Botz yang siap membantu kakak dalam membuat Pesanan`,
+                           footerText: `Haikal Botz`,
                                 "contextInfo": {
 									  mentionedJid: [configs.ownerList[0]],
                                       participant: sender,
