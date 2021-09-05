@@ -118,7 +118,7 @@ module.exports = handle = (client, Client) => {
               })
           	let po = client.prepareMessageFromContent(data.from, {
 				  "listMessage":{
-                  "title": `MENU J-BOT`,
+                  "title": `MENU HaikalBOT`,
                   "description": `List Menu nya kak *${data.pushname}*`,
                   "buttonText": "MENU!",
                   "listType": "SINGLE_SELECT",
@@ -131,7 +131,7 @@ module.exports = handle = (client, Client) => {
             "rows": [
               {
                 "title": "GOPAY",
-                "description": " QRIS GOPAY ", 
+                "description": " NOMOR GOPAY ", 
                 "rowId": `${data.prefix}gopay`
               }, 
               {
@@ -158,7 +158,7 @@ module.exports = handle = (client, Client) => {
               })
           	let po = client.prepareMessageFromContent(data.from, {
 				  "listMessage":{
-                  "title": `MENU CYZ BOT`,
+                  "title": `MENU HAIKAL BOT`,
                   "description": `PAYMENT nya kak *${data.pushname}*`,
                   "buttonText": "MENU!",
                   "listType": "SINGLE_SELECT",
@@ -188,7 +188,7 @@ module.exports = handle = (client, Client) => {
               })
           	let po = client.prepareMessageFromContent(data.from, {
 				  "listMessage":{
-                  "title": `List Cyz Botz`,
+                  "title": `List Haikal Botz`,
                   "description": `List Diamond nya kak *${data.pushname}*`,
                   "buttonText": "MENU!",
                   "listType": "SINGLE_SELECT",
