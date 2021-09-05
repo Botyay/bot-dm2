@@ -118,7 +118,7 @@ module.exports = handle = (client, Client) => {
               })
           	let po = client.prepareMessageFromContent(data.from, {
 				  "listMessage":{
-                  "title": `MENU HaikalBOT`,
+                  "title": `MENU Haikal-BOT`,
                   "description": `List Menu nya kak *${data.pushname}*`,
                   "buttonText": "MENU!",
                   "listType": "SINGLE_SELECT",
