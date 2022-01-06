@@ -23,7 +23,7 @@
 
 ```bash
 > git clone https://github.com/Botyay/bot-dm2
-> cd wabot
+> cd bot-dm2
 > npm i
 ```
 ### For termux users before running the above command write this command
