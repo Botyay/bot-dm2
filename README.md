@@ -22,7 +22,7 @@
 ### Install ⬇️
 
 ```bash
-> git clone https://github.com/CyzChan/bot-dm2
+> git clone https://github.com/Botyay/bot-dm2
 > cd wabot
 > npm i
 ```
