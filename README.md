@@ -24,7 +24,7 @@
 ```bash
 > git clone https://github.com/Botyay/bot-dm2
 > cd bot-dm2
-> npm i
+> npm start
 ```
 ### For termux users before running the above command write this command
 ```bash
